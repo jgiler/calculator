@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       /* VERY HARD: Create a simple calculator that prompts the user for a number, an operator (either +, -, * or /)
+        and another number, and then uses the functions created in the hard challenge to output the value in sentence form.
+        Example output: "3 + 4 = 7" */
+        var numOne = Number(prompt("Select your first number"))
+        var operator = prompt("Select your operator")
+        var numTwo = Number(prompt("Select your second number"))
+        var total;
+    
+        function add(x, y) {        
+            console.log(x + y)
+            total = numOne + numTwo
+        }
+        add(6,3)
+        
+        function subtract(x, y) {
+            console.log(x - y)
+            total = numOne - numTwo
+        }
+        subtract(4,3)
+        function multiply(x, y) {
+            console.log(x * y)
+            total = numOne * numTwo
+        }
+        multiply(7,2)
+        function divide(x, y) {
+            console.log(x / y)
+            total = numOne / numTwo
+        }
+        divide(8,2)
+        if (operator === "+") {
+            add();
+            document.write(numOne + "+" + numTwo + "=" + total)
+        }
+        if (operator === "-") {
+            subtract();
+            document.write(numOne + "-" + numTwo + "=" + total)
+        }
+        if (operator === "*") {
+            multiply();
+            document.write(numOne + "*" + numTwo + "=" + total)
+        }
+        if (operator === "/") {
+            divide();
+            document.write(numOne + "/" + numTwo + "=" + total)
+        }
+    </script>
+</body>
+</html>
